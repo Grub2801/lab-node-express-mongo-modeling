@@ -1,7 +1,5 @@
-var mongoose = require('mongoose');
-require('./terminal');
-var Terminal  = mongoose.model("Terminal");
-
+var mongoose      = require('mongoose');
+var Terminal      = mongoose.model("Terminal");
 var airportSchema = new mongoose.Schema({
   name      : String,
   country   : String,
@@ -9,4 +7,5 @@ var airportSchema = new mongoose.Schema({
   opened    : Date
 });
 
+require('./terminal');
 mongoose.model('Airport', airportSchema);
